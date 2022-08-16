@@ -14,7 +14,7 @@ msgstr ""
 "X-Crowdin-File: /[AmetrasIntelligence.report-print-send] 13.0/base_report_to_printer/i18n/base_report_to_printer.pot\n"
 "X-Crowdin-File-ID: 4582\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2022-08-11 13:59\n"
+"PO-Revision-Date: 2022-08-16 14:26\n"
 
 #. module: base_report_to_printer
 #: model:ir.model.fields.selection,name:base_report_to_printer.selection__printing_job__job_state__aborted
@@ -790,7 +790,7 @@ msgstr "Drucker von CUPS auffrischen"
 #. module: base_report_to_printer
 #: model:ir.model.fields,field_description:base_report_to_printer.field_printing_report_xml_action__user_id
 msgid "User"
-msgstr ""
+msgstr "Benutzer"
 
 #. module: base_report_to_printer
 #: model:ir.model,name:base_report_to_printer.model_res_users
