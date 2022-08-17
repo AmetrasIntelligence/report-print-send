@@ -14,7 +14,7 @@ msgstr ""
 "X-Crowdin-File: /[AmetrasIntelligence.report-print-send] 13.0/remote_report_to_printer/i18n/remote_report_to_printer.pot\n"
 "X-Crowdin-File-ID: 4588\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2022-08-06 23:55\n"
+"PO-Revision-Date: 2022-08-17 09:51\n"
 
 #. module: remote_report_to_printer
 #: model:ir.model.constraint,message:remote_report_to_printer.constraint_res_remote_printer_unique_printer_remote_usage
@@ -122,7 +122,7 @@ msgstr "Aktionen"
 #. module: remote_report_to_printer
 #: model:ir.model.fields.selection,name:remote_report_to_printer.selection__res_remote_printer__printer_usage__standard
 msgid "Standard"
-msgstr ""
+msgstr "Standard"
 
 #. module: remote_report_to_printer
 #: model:ir.model.fields,field_description:remote_report_to_printer.field_printing_action__action_type
