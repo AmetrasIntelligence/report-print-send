@@ -14,7 +14,7 @@ msgstr ""
 "X-Crowdin-File: /[AmetrasIntelligence.report-print-send] 13.0/base_report_to_printer/i18n/base_report_to_printer.pot\n"
 "X-Crowdin-File-ID: 4582\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2022-08-17 15:12\n"
+"PO-Revision-Date: 2022-08-18 15:45\n"
 
 #. module: base_report_to_printer
 #: model:ir.model.fields.selection,name:base_report_to_printer.selection__printing_job__job_state__aborted
@@ -426,7 +426,7 @@ msgstr "Ohne Grund"
 #. module: base_report_to_printer
 #: model_terms:ir.ui.view,arch_db:base_report_to_printer.printer_update_wizard
 msgid "Ok"
-msgstr ""
+msgstr "Bestätigen"
 
 #. module: base_report_to_printer
 #: model:ir.model.fields,field_description:base_report_to_printer.field_ir_actions_report__printer_tray_id
@@ -526,7 +526,7 @@ msgstr "Druckerliste"
 #: model_terms:ir.ui.view,arch_db:base_report_to_printer.view_users_form
 #: model_terms:ir.ui.view,arch_db:base_report_to_printer.view_users_form_simple_modif
 msgid "Printing"
-msgstr ""
+msgstr "Drucken"
 
 #. module: base_report_to_printer
 #: model:res.groups,name:base_report_to_printer.printing_group_manager
