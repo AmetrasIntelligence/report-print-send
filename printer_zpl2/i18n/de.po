@@ -14,7 +14,7 @@ msgstr ""
 "X-Crowdin-File: /[AmetrasIntelligence.report-print-send] 13.0/printer_zpl2/i18n/printer_zpl2.pot\n"
 "X-Crowdin-File-ID: 4586\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2022-08-17 13:51\n"
+"PO-Revision-Date: 2022-08-18 13:37\n"
 
 #. module: printer_zpl2
 #: model:ir.model.fields.selection,name:printer_zpl2.selection__printing_label_zpl2_component__font__b
@@ -980,7 +980,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:printer_zpl2.field_printing_label_zpl2__width
 #: model:ir.model.fields,field_description:printer_zpl2.field_printing_label_zpl2_component__width
 msgid "Width"
-msgstr ""
+msgstr "Breite"
 
 #. module: printer_zpl2
 #: model:ir.model.fields,field_description:printer_zpl2.field_printing_label_zpl2__labelary_width
