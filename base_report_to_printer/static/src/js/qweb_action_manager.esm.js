@@ -2,6 +2,44 @@
 import {Markup} from "web.utils";
 import {registry} from "@web/core/registry";
 
+/**
+ * Refreshes the current view to make changes visible in the record.
+ * Handles both legacy and OWL views.
+ *
+ * @param {Object} env - The environment object
+ * @param {Object} action - The action object containing context with active_ids
+ */
+function _refreshView(env, action) {
+    const controller = env.services.action.currentController;
+    if (!controller) {
+        return;
+    }
+    const props = controller.props;
+    const view = controller.view;
+    if (!view) {
+        return;
+    }
+
+    // LEGACY CODE COMPATIBILITY: remove when controllers will be written in owl
+    if (view.isLegacy) {
+        const {__legacy_widget__} = controller.getLocalState();
+        const params = {};
+        let currentId = props.resId;
+        if (!currentId || action.context.active_id !== props.resId) {
+            currentId = action.context.active_id;
+        }
+        params.currentId = currentId;
+        return __legacy_widget__.reload(params);
+    }
+
+    // Handle OWL views
+    let currentId = props.resId;
+    if (!currentId || !action.context.active_ids.includes(props.resId)) {
+        currentId = action.context.active_ids[0];
+    }
+    env.services.action.switchView(props.type, {resId: currentId});
+}
+
 async function cupsReportActionHandler(action, options, env) {
     if (action.report_type === "qweb-pdf") {
         const orm = env.services.orm;
@@ -24,6 +62,8 @@ async function cupsReportActionHandler(action, options, env) {
                 env.services.notification.add(env._t("Successfully sent to printer!"), {
                     type: "success",
                 });
+                // Refresh the view to make changes visible (e.g., updated fields after printing)
+                _refreshView(env, action);
                 return true;
                 // In case of exception during the job, we won't get any response. So we
                 // should flag the exception and notify the user
